@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6C9A334-DA1C-4A4C-8FB1-7B6A3CFD144B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FitnessCLUB</RootNamespace>
+    <AssemblyName>FitnessCLUB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CuoreUI.Winforms.2025.3.3\lib\netstandard2.0\CuoreUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ububox.G2Crack.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SATAUiFramework, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SATAUiFramework.1.1.2\lib\net40\SATAUiFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Activity.Designer.cs">
+      <DependentUpon>Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contactus.Designer.cs">
+      <DependentUpon>Contactus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Goal.Designer.cs">
+      <DependentUpon>Goal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUser.Designer.cs">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionsUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuestionsUser.Designer.cs">
+      <DependentUpon>QuestionsUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.Designer.cs">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register_user.Designer.cs">
+      <DependentUpon>Register_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_user.Designer.cs">
+      <DependentUpon>Login_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoalDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GoalDashboard.Designer.cs">
+      <DependentUpon>GoalDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home1.Designer.cs">
+      <DependentUpon>Home1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Activity.resx">
+      <DependentUpon>Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactus.resx">
+      <DependentUpon>Contactus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goal.resx">
+      <DependentUpon>Goal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUser.resx">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress.resx">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionsUser.resx">
+      <DependentUpon>QuestionsUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUser.resx">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_user.resx">
+      <DependentUpon>Register_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Login_user.resx">
+      <DependentUpon>Login_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoalDashboard.resx">
+      <DependentUpon>GoalDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home1.resx">
+      <DependentUpon>Home1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitness Register_new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitness Register_new11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cross2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitness Login new 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitness club logo - Made with PosterMyWall %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop - 1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop - 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Progress1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Progress2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-in-flat-style.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContactUs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forgot password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionaryUSer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionaryUSer %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
