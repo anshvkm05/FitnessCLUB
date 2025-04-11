@@ -159,6 +159,8 @@
             this.txtUserID.TabIndex = 38;
             this.txtUserID.TextOffset = new System.Drawing.Size(0, 0);
             this.txtUserID.UnderlinedStyle = false;
+            this.txtUserID.ContentChanged += new System.EventHandler(this.txtUserID_ContentChanged);
+            this.txtUserID.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtUserID_MouseDown);
             // 
             // txtName
             // 

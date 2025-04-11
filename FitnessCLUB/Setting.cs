@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SATAUiFramework.Controls;
 using System.Data.OleDb;
+using System.Drawing.Text;
 
 namespace FitnessCLUB.Resources
 {
     public partial class Setting: UserControl
     {
         string connString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=D:\Project DDOOCP try 2\FitnessCLUB\FitnessCLUB\FItnessClub.mdb;";
-        OleDbConnection conn;
+        OleDbConnection conn; // Store UserID
         public Setting()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace FitnessCLUB.Resources
                 if (reader.Read())
                 {
                     if (txtName != null) txtName.Content = reader["Name"].ToString();
+                    if (txtName != null) guna2HtmlLabel1.Text = reader["UserID"].ToString();
                     if (txtAge != null) txtAge.Content = reader["Age"].ToString();
                     if (txtHeight != null) txtHeight.Content = reader["Height"].ToString();
                     if (txtWeight != null) txtWeight.Content = reader["Weight"].ToString();
@@ -69,17 +71,18 @@ namespace FitnessCLUB.Resources
             try
             {
                 conn.Open();
-                string query = "UPDATE UserData SET Name = @Name, Age = @Age, Height = @Height, Weight = @Weight, Gender = @Gender, BMI = @bmi WHERE UserID = @UserID";
+                string query = "UPDATE UserData SET Name = @name, Age = @age, Height = @height, Weight = @weight, Gender = @gender, BMI = @bmi WHERE UserID = @userID";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
                 // Add parameters with values from textboxes
-                cmd.Parameters.AddWithValue("@Name", txtName.Content);
-                cmd.Parameters.AddWithValue("@Age", txtAge.Content);
-                cmd.Parameters.AddWithValue("@Height", txtHeight.Content);
-                cmd.Parameters.AddWithValue("@Weight", txtWeight.Content);
-                cmd.Parameters.AddWithValue("@Gender", txtGender.Content);
-                cmd.Parameters.AddWithValue("@UserID", txtUserID.Content); // Assuming UserID is not editable
+                cmd.Parameters.AddWithValue("@name", txtName.Content.ToString());
+                cmd.Parameters.AddWithValue("@age", txtAge.Content);
+                cmd.Parameters.AddWithValue("@height", txtHeight.Content);
+                cmd.Parameters.AddWithValue("@weight", txtWeight.Content);
+                cmd.Parameters.AddWithValue("@gender", txtGender.Content);
                 cmd.Parameters.AddWithValue("@bmi", txtBMI.Content);
+                cmd.Parameters.AddWithValue("@userID", guna2HtmlLabel1.Text); // Assuming UserID is not editable
+                
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -89,6 +92,11 @@ namespace FitnessCLUB.Resources
                 else
                 {
                     MessageBox.Show("Failed to update user data.");
+                }
+
+                if (txtUserID.Content != guna2HtmlLabel1.Text)
+                {
+                    MessageBox.Show("User ID cannot be changed.");
                 }
             }
             catch (Exception ex)
@@ -145,11 +153,20 @@ namespace FitnessCLUB.Resources
         private void button1_Click(object sender, EventArgs e)
         {
             Update_UserData();
+            Load_UserData();
         }
 
         private void Setting_DoubleClick(object sender, EventArgs e)
         {
             Load_UserData();
+        }
+
+        private void txtUserID_ContentChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtUserID_MouseDown(object sender, MouseEventArgs e)
+        {
         }
     }
 }

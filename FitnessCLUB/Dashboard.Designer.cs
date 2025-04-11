@@ -70,7 +70,7 @@
             this.sataPictureBox1.BorderSize = 2;
             this.sataPictureBox1.GradientAngle = 50F;
             this.sataPictureBox1.Image = global::FitnessCLUB.Properties.Resources.Fitness_club_logo___Made_with_PosterMyWall__1_;
-            this.sataPictureBox1.Location = new System.Drawing.Point(57, 22);
+            this.sataPictureBox1.Location = new System.Drawing.Point(57, 13);
             this.sataPictureBox1.Name = "sataPictureBox1";
             this.sataPictureBox1.Size = new System.Drawing.Size(139, 139);
             this.sataPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
