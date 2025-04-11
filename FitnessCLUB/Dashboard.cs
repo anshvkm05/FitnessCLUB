@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.HtmlControls;
@@ -14,21 +15,24 @@ namespace FitnessCLUB
 {
     public partial class Dashboard: Form
     {
-        private Home1 homeControl;
-        private Goal goalControl;
-        private Activity activityControl;
-        private Setting settingControl;
-        private Contactus contactusControl;
-        private Progress ProgressControl;
+        public Home1 homeControl;
+        public Activity activityControl;
+        Setting settingControl;
+        Contactus contactusControl;
+        public Progress ProgressControl;
+        public Goal goalControl;
         public Dashboard()
         {
             InitializeComponent();
-            homeControl = new Home1();
-            goalControl = new Goal();
-            activityControl = new Activity();
+            
+            homeControl = new Home1(this);
+            goalControl = new Goal(this);
+            activityControl = new Activity(this);
             settingControl = new Setting();
             contactusControl = new Contactus();
-            ProgressControl = new Progress();
+            ProgressControl = new Progress(this);
+
+           
 
             panelContainer.Controls.Add(activityControl);
             panelContainer.Controls.Add(homeControl);
@@ -48,17 +52,7 @@ namespace FitnessCLUB
             homeControl.BringToFront();
         }
 
-        private void LoadUserControl(UserControl userControl)
-        {
-            if (userControl == null)
-            {
-                MessageBox.Show("Error: The selected UserControl is null!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            panelContainer.Controls.Clear(); // Remove existing control
-            userControl.Dock = DockStyle.Fill; // Make it fill the panel
-            panelContainer.Controls.Add(userControl); // Add the new control
-        }
+
 
         private void cuiLabel1_Load(object sender, EventArgs e)
         {

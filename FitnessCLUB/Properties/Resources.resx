@@ -124,6 +124,9 @@
   <data name="Cross2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cross2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ContactUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ContactUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Goal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Goal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +157,9 @@
   <data name="Desktop - 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Desktop - 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="homepage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepage3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Activity1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Activity1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,8 +169,11 @@
   <data name="Forgot password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forgot password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ContactUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ContactUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QuestionaryUSer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuestionaryUSer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Goalpage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goalpage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-icon-in-flat-style" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-icon-in-flat-style.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +184,7 @@
   <data name="QuestionaryUSer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuestionaryUSer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuestionaryUSer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QuestionaryUSer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Setting2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Setting2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -41,8 +41,14 @@
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCapital = new System.Windows.Forms.Label();
+            this.lbl8char = new System.Windows.Forms.Label();
+            this.lblDigit = new System.Windows.Forms.Label();
+            this.Invalidemail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.sataPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sataPictureBox1
@@ -127,7 +133,7 @@
             this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Location = new System.Drawing.Point(148, 234);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "abc123";
@@ -209,11 +215,14 @@
             this.txtpassword.Location = new System.Drawing.Point(149, 300);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(189, 30);
             this.txtpassword.TabIndex = 26;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
+            this.txtpassword.Enter += new System.EventHandler(this.txtpassword_Enter);
+            this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
             // 
             // txtusername
             // 
@@ -261,12 +270,70 @@
             this.txtemail.Size = new System.Drawing.Size(189, 30);
             this.txtemail.TabIndex = 28;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblDigit);
+            this.panel1.Controls.Add(this.lbl8char);
+            this.panel1.Controls.Add(this.lblCapital);
+            this.panel1.Location = new System.Drawing.Point(146, 246);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(195, 47);
+            this.panel1.TabIndex = 29;
+            this.panel1.Visible = false;
+            // 
+            // lblCapital
+            // 
+            this.lblCapital.AutoSize = true;
+            this.lblCapital.ForeColor = System.Drawing.Color.Red;
+            this.lblCapital.Location = new System.Drawing.Point(4, 5);
+            this.lblCapital.Name = "lblCapital";
+            this.lblCapital.Size = new System.Drawing.Size(162, 13);
+            this.lblCapital.TabIndex = 0;
+            this.lblCapital.Text = "At least 1 Uppercase Letter (A-Z)";
+            // 
+            // lbl8char
+            // 
+            this.lbl8char.AutoSize = true;
+            this.lbl8char.ForeColor = System.Drawing.Color.Red;
+            this.lbl8char.Location = new System.Drawing.Point(4, 18);
+            this.lbl8char.Name = "lbl8char";
+            this.lbl8char.Size = new System.Drawing.Size(105, 13);
+            this.lbl8char.TabIndex = 1;
+            this.lbl8char.Text = "At least 8 Characters";
+            // 
+            // lblDigit
+            // 
+            this.lblDigit.AutoSize = true;
+            this.lblDigit.ForeColor = System.Drawing.Color.Red;
+            this.lblDigit.Location = new System.Drawing.Point(4, 31);
+            this.lblDigit.Name = "lblDigit";
+            this.lblDigit.Size = new System.Drawing.Size(115, 13);
+            this.lblDigit.TabIndex = 2;
+            this.lblDigit.Text = "At least 1 Number (0-9)";
+            // 
+            // Invalidemail
+            // 
+            this.Invalidemail.BackColor = System.Drawing.Color.Transparent;
+            this.Invalidemail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Invalidemail.ForeColor = System.Drawing.Color.Red;
+            this.Invalidemail.Location = new System.Drawing.Point(149, 209);
+            this.Invalidemail.Name = "Invalidemail";
+            this.Invalidemail.Size = new System.Drawing.Size(115, 17);
+            this.Invalidemail.TabIndex = 30;
+            this.Invalidemail.Text = "Invalid Email Format";
+            this.Invalidemail.UseSystemCursors = true;
+            this.Invalidemail.Visible = false;
+            // 
             // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FitnessCLUB.Properties.Resources.Fitness_Register_new11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.Invalidemail);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtpassword);
@@ -286,6 +353,8 @@
             this.Load += new System.EventHandler(this.RegisterUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sataPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +375,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private Guna.UI2.WinForms.Guna2TextBox txtemail;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblDigit;
+        private System.Windows.Forms.Label lbl8char;
+        private System.Windows.Forms.Label lblCapital;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Invalidemail;
     }
 }

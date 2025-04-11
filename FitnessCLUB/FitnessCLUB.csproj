@@ -74,6 +74,12 @@
     <Compile Include="Activity.Designer.cs">
       <DependentUpon>Activity.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActivityDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActivityDashboard.Designer.cs">
+      <DependentUpon>ActivityDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contactus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Activity.resx">
       <DependentUpon>Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivityDashboard.resx">
+      <DependentUpon>ActivityDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contactus.resx">
       <DependentUpon>Contactus.cs</DependentUpon>
@@ -276,6 +285,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\QuestionaryUSer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goalpage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

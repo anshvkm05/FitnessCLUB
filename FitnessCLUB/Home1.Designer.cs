@@ -28,44 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cuiCircleProgressBar1 = new CuoreUI.Controls.cuiCircleProgressBar();
+            this.todayProgressBar = new CuoreUI.Controls.cuiCircleProgressBar();
             this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStreak = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.select_Excercise = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Enter_Goal = new SATATextBox();
-            this.Addgoalbtn = new System.Windows.Forms.Button();
+            this.selectExcercise = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.guna2CustomRadioButton1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton7 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton5 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton4 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2CustomRadioButton6 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.rdoRunning = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.lblTodayProgress = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowLayoutPanelGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rdoZumba = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoCycling = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoWalking = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoSwimming = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoSkipping = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.flowLayoutPanelActivity = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtGoalName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // cuiCircleProgressBar1
+            // todayProgressBar
             // 
-            this.cuiCircleProgressBar1.BorderWidth = 25;
-            this.cuiCircleProgressBar1.ForeColor = System.Drawing.Color.Black;
-            this.cuiCircleProgressBar1.Location = new System.Drawing.Point(437, 112);
-            this.cuiCircleProgressBar1.MaximumValue = 100;
-            this.cuiCircleProgressBar1.MinimumSize = new System.Drawing.Size(50, 50);
-            this.cuiCircleProgressBar1.MinimumValue = 0;
-            this.cuiCircleProgressBar1.Name = "cuiCircleProgressBar1";
-            this.cuiCircleProgressBar1.NormalColor = System.Drawing.Color.White;
-            this.cuiCircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.cuiCircleProgressBar1.ProgressValue = 5;
-            this.cuiCircleProgressBar1.RoundedEnds = true;
-            this.cuiCircleProgressBar1.Size = new System.Drawing.Size(178, 176);
-            this.cuiCircleProgressBar1.TabIndex = 0;
+            this.todayProgressBar.BorderWidth = 25;
+            this.todayProgressBar.ForeColor = System.Drawing.Color.Black;
+            this.todayProgressBar.Location = new System.Drawing.Point(437, 112);
+            this.todayProgressBar.MaximumValue = 100;
+            this.todayProgressBar.MinimumSize = new System.Drawing.Size(50, 50);
+            this.todayProgressBar.MinimumValue = 0;
+            this.todayProgressBar.Name = "todayProgressBar";
+            this.todayProgressBar.NormalColor = System.Drawing.Color.White;
+            this.todayProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.todayProgressBar.ProgressValue = 10;
+            this.todayProgressBar.RoundedEnds = true;
+            this.todayProgressBar.Size = new System.Drawing.Size(178, 176);
+            this.todayProgressBar.TabIndex = 0;
             // 
             // sataCircularProgress1
             // 
@@ -77,7 +77,7 @@
             this.sataCircularProgress1.IsAnimated = false;
             this.sataCircularProgress1.Location = new System.Drawing.Point(81, 99);
             this.sataCircularProgress1.Name = "sataCircularProgress1";
-            this.sataCircularProgress1.Percentage = 63;
+            this.sataCircularProgress1.Percentage = 0;
             this.sataCircularProgress1.ShowText = true;
             this.sataCircularProgress1.Size = new System.Drawing.Size(200, 200);
             this.sataCircularProgress1.TabIndex = 1;
@@ -86,16 +86,16 @@
             this.sataCircularProgress1.UnFilledColor = System.Drawing.Color.White;
             this.sataCircularProgress1.UnfilledThickness = 24;
             // 
-            // label2
+            // lblStreak
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 129.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.label2.Location = new System.Drawing.Point(766, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 204);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "5";
+            this.lblStreak.AutoSize = true;
+            this.lblStreak.Font = new System.Drawing.Font("Bernard MT Condensed", 129.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.lblStreak.Location = new System.Drawing.Point(766, 126);
+            this.lblStreak.Name = "lblStreak";
+            this.lblStreak.Size = new System.Drawing.Size(151, 204);
+            this.lblStreak.TabIndex = 3;
+            this.lblStreak.Text = "1";
             // 
             // label3
             // 
@@ -120,68 +120,23 @@
             this.label4.Text = "Streak of";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // select_Excercise
+            // selectExcercise
             // 
-            this.select_Excercise.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.select_Excercise.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.select_Excercise.FormattingEnabled = true;
-            this.select_Excercise.Items.AddRange(new object[] {
+            this.selectExcercise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectExcercise.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectExcercise.FormattingEnabled = true;
+            this.selectExcercise.Items.AddRange(new object[] {
             "Running",
             "Walking",
             "Cycling",
             "Swimming",
             "Jump Rope",
             "Zumba"});
-            this.select_Excercise.Location = new System.Drawing.Point(58, 812);
-            this.select_Excercise.Name = "select_Excercise";
-            this.select_Excercise.Size = new System.Drawing.Size(301, 37);
-            this.select_Excercise.TabIndex = 7;
-            this.select_Excercise.Text = "Select Exercise";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(58, 760);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 28);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Enter Goal Name";
-            // 
-            // Enter_Goal
-            // 
-            this.Enter_Goal.BackColor = System.Drawing.Color.White;
-            this.Enter_Goal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.Enter_Goal.BorderFocusColor = System.Drawing.Color.Black;
-            this.Enter_Goal.BorderRadius = 5;
-            this.Enter_Goal.BorderSize = 1;
-            this.Enter_Goal.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.Enter_Goal.Icon = null;
-            this.Enter_Goal.IconSize = new System.Drawing.Size(10, 10);
-            this.Enter_Goal.Location = new System.Drawing.Point(56, 750);
-            this.Enter_Goal.Margin = new System.Windows.Forms.Padding(1);
-            this.Enter_Goal.Multiline = false;
-            this.Enter_Goal.Name = "Enter_Goal";
-            this.Enter_Goal.PasswordChar = false;
-            this.Enter_Goal.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.Enter_Goal.PlaceholderText = "Enter Goal Name";
-            this.Enter_Goal.Size = new System.Drawing.Size(423, 47);
-            this.Enter_Goal.TabIndex = 9;
-            this.Enter_Goal.Texts = "";
-            this.Enter_Goal.UnderlinedStyle = false;
-            // 
-            // Addgoalbtn
-            // 
-            this.Addgoalbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.Addgoalbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Addgoalbtn.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addgoalbtn.ForeColor = System.Drawing.Color.White;
-            this.Addgoalbtn.Location = new System.Drawing.Point(369, 871);
-            this.Addgoalbtn.Name = "Addgoalbtn";
-            this.Addgoalbtn.Size = new System.Drawing.Size(156, 49);
-            this.Addgoalbtn.TabIndex = 11;
-            this.Addgoalbtn.Text = "Add Goal";
-            this.Addgoalbtn.UseVisualStyleBackColor = false;
+            this.selectExcercise.Location = new System.Drawing.Point(47, 812);
+            this.selectExcercise.Name = "selectExcercise";
+            this.selectExcercise.Size = new System.Drawing.Size(301, 37);
+            this.selectExcercise.TabIndex = 7;
+            this.selectExcercise.Text = "Select Exercise";
             // 
             // button1
             // 
@@ -189,7 +144,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(903, 399);
+            this.button1.Location = new System.Drawing.Point(893, 398);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 49);
             this.button1.TabIndex = 12;
@@ -203,137 +158,48 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(903, 871);
+            this.button2.Location = new System.Drawing.Point(893, 871);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 49);
+            this.button2.Size = new System.Drawing.Size(156, 49);
             this.button2.TabIndex = 13;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // guna2CustomRadioButton1
+            // rdoRunning
             // 
-            this.guna2CustomRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton1.Location = new System.Drawing.Point(583, 585);
-            this.guna2CustomRadioButton1.Name = "guna2CustomRadioButton1";
-            this.guna2CustomRadioButton1.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton1.TabIndex = 15;
-            this.guna2CustomRadioButton1.Text = "guna2CustomRadioButton1";
-            this.guna2CustomRadioButton1.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton1.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton1.UseTransparentBackground = true;
-            this.guna2CustomRadioButton1.CheckedChanged += new System.EventHandler(this.guna2CustomRadioButton1_CheckedChanged);
+            this.rdoRunning.BackColor = System.Drawing.Color.Transparent;
+            this.rdoRunning.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoRunning.CheckedState.BorderThickness = 0;
+            this.rdoRunning.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoRunning.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoRunning.Location = new System.Drawing.Point(571, 766);
+            this.rdoRunning.Name = "rdoRunning";
+            this.rdoRunning.Size = new System.Drawing.Size(17, 17);
+            this.rdoRunning.TabIndex = 27;
+            this.rdoRunning.Text = "rdoRunning";
+            this.rdoRunning.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoRunning.UncheckedState.BorderThickness = 2;
+            this.rdoRunning.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoRunning.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoRunning.UseTransparentBackground = true;
+            this.rdoRunning.CheckedChanged += new System.EventHandler(this.rdoRunning_CheckedChanged);
             // 
-            // guna2CustomRadioButton2
+            // lblTodayProgress
             // 
-            this.guna2CustomRadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton2.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton2.Location = new System.Drawing.Point(825, 585);
-            this.guna2CustomRadioButton2.Name = "guna2CustomRadioButton2";
-            this.guna2CustomRadioButton2.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton2.TabIndex = 24;
-            this.guna2CustomRadioButton2.Text = "guna2CustomRadioButton2";
-            this.guna2CustomRadioButton2.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton2.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton2.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton7
-            // 
-            this.guna2CustomRadioButton7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton7.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton7.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton7.Location = new System.Drawing.Point(583, 658);
-            this.guna2CustomRadioButton7.Name = "guna2CustomRadioButton7";
-            this.guna2CustomRadioButton7.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton7.TabIndex = 25;
-            this.guna2CustomRadioButton7.Text = "guna2CustomRadioButton7";
-            this.guna2CustomRadioButton7.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton7.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton7.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton7.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton5
-            // 
-            this.guna2CustomRadioButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton5.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton5.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton5.Location = new System.Drawing.Point(825, 658);
-            this.guna2CustomRadioButton5.Name = "guna2CustomRadioButton5";
-            this.guna2CustomRadioButton5.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton5.TabIndex = 26;
-            this.guna2CustomRadioButton5.Text = "guna2CustomRadioButton5";
-            this.guna2CustomRadioButton5.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton5.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton5.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton5.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton4
-            // 
-            this.guna2CustomRadioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton4.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton4.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton4.Location = new System.Drawing.Point(583, 727);
-            this.guna2CustomRadioButton4.Name = "guna2CustomRadioButton4";
-            this.guna2CustomRadioButton4.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton4.TabIndex = 27;
-            this.guna2CustomRadioButton4.Text = "guna2CustomRadioButton4";
-            this.guna2CustomRadioButton4.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton4.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton4.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton4.UseTransparentBackground = true;
-            // 
-            // guna2CustomRadioButton6
-            // 
-            this.guna2CustomRadioButton6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomRadioButton6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomRadioButton6.CheckedState.BorderThickness = 0;
-            this.guna2CustomRadioButton6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2CustomRadioButton6.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton6.Location = new System.Drawing.Point(825, 727);
-            this.guna2CustomRadioButton6.Name = "guna2CustomRadioButton6";
-            this.guna2CustomRadioButton6.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomRadioButton6.TabIndex = 28;
-            this.guna2CustomRadioButton6.Text = "guna2CustomRadioButton6";
-            this.guna2CustomRadioButton6.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CustomRadioButton6.UncheckedState.BorderThickness = 2;
-            this.guna2CustomRadioButton6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton6.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.guna2CustomRadioButton6.UseTransparentBackground = true;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(488, 167);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(73, 67);
-            this.guna2HtmlLabel1.TabIndex = 29;
-            this.guna2HtmlLabel1.Text = "5%";
+            this.lblTodayProgress.BackColor = System.Drawing.Color.Transparent;
+            this.lblTodayProgress.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayProgress.ForeColor = System.Drawing.Color.White;
+            this.lblTodayProgress.Location = new System.Drawing.Point(486, 175);
+            this.lblTodayProgress.Name = "lblTodayProgress";
+            this.lblTodayProgress.Size = new System.Drawing.Size(73, 49);
+            this.lblTodayProgress.TabIndex = 29;
+            this.lblTodayProgress.Text = "10%";
             // 
             // flowLayoutPanelGoal
             // 
             this.flowLayoutPanelGoal.AutoScroll = true;
-            this.flowLayoutPanelGoal.Location = new System.Drawing.Point(56, 548);
+            this.flowLayoutPanelGoal.Location = new System.Drawing.Point(45, 548);
             this.flowLayoutPanelGoal.Name = "flowLayoutPanelGoal";
             this.flowLayoutPanelGoal.Size = new System.Drawing.Size(449, 168);
             this.flowLayoutPanelGoal.TabIndex = 30;
@@ -352,37 +218,174 @@
             this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
+            // rdoZumba
+            // 
+            this.rdoZumba.BackColor = System.Drawing.Color.Transparent;
+            this.rdoZumba.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoZumba.CheckedState.BorderThickness = 0;
+            this.rdoZumba.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoZumba.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoZumba.Location = new System.Drawing.Point(903, 827);
+            this.rdoZumba.Name = "rdoZumba";
+            this.rdoZumba.Size = new System.Drawing.Size(17, 17);
+            this.rdoZumba.TabIndex = 32;
+            this.rdoZumba.Text = "rdoZumba";
+            this.rdoZumba.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoZumba.UncheckedState.BorderThickness = 2;
+            this.rdoZumba.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoZumba.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoZumba.UseTransparentBackground = true;
+            // 
+            // rdoCycling
+            // 
+            this.rdoCycling.BackColor = System.Drawing.Color.Transparent;
+            this.rdoCycling.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCycling.CheckedState.BorderThickness = 0;
+            this.rdoCycling.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoCycling.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoCycling.Location = new System.Drawing.Point(738, 827);
+            this.rdoCycling.Name = "rdoCycling";
+            this.rdoCycling.Size = new System.Drawing.Size(17, 17);
+            this.rdoCycling.TabIndex = 33;
+            this.rdoCycling.Text = "rdoCycling";
+            this.rdoCycling.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoCycling.UncheckedState.BorderThickness = 2;
+            this.rdoCycling.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoCycling.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoCycling.UseTransparentBackground = true;
+            // 
+            // rdoWalking
+            // 
+            this.rdoWalking.BackColor = System.Drawing.Color.Transparent;
+            this.rdoWalking.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoWalking.CheckedState.BorderThickness = 0;
+            this.rdoWalking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoWalking.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoWalking.Location = new System.Drawing.Point(903, 766);
+            this.rdoWalking.Name = "rdoWalking";
+            this.rdoWalking.Size = new System.Drawing.Size(17, 17);
+            this.rdoWalking.TabIndex = 34;
+            this.rdoWalking.Text = "rdoWalking";
+            this.rdoWalking.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoWalking.UncheckedState.BorderThickness = 2;
+            this.rdoWalking.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoWalking.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoWalking.UseTransparentBackground = true;
+            // 
+            // rdoSwimming
+            // 
+            this.rdoSwimming.BackColor = System.Drawing.Color.Transparent;
+            this.rdoSwimming.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoSwimming.CheckedState.BorderThickness = 0;
+            this.rdoSwimming.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoSwimming.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoSwimming.Location = new System.Drawing.Point(738, 766);
+            this.rdoSwimming.Name = "rdoSwimming";
+            this.rdoSwimming.Size = new System.Drawing.Size(17, 17);
+            this.rdoSwimming.TabIndex = 35;
+            this.rdoSwimming.Text = "rdoSwimming";
+            this.rdoSwimming.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoSwimming.UncheckedState.BorderThickness = 2;
+            this.rdoSwimming.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoSwimming.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoSwimming.UseTransparentBackground = true;
+            this.rdoSwimming.CheckedChanged += new System.EventHandler(this.rdoSwimming_CheckedChanged);
+            // 
+            // rdoSkipping
+            // 
+            this.rdoSkipping.BackColor = System.Drawing.Color.Transparent;
+            this.rdoSkipping.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoSkipping.CheckedState.BorderThickness = 0;
+            this.rdoSkipping.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.rdoSkipping.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoSkipping.Location = new System.Drawing.Point(571, 827);
+            this.rdoSkipping.Name = "rdoSkipping";
+            this.rdoSkipping.Size = new System.Drawing.Size(17, 17);
+            this.rdoSkipping.TabIndex = 36;
+            this.rdoSkipping.Text = "rdoSkipping";
+            this.rdoSkipping.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.rdoSkipping.UncheckedState.BorderThickness = 2;
+            this.rdoSkipping.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoSkipping.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.rdoSkipping.UseTransparentBackground = true;
+            // 
+            // flowLayoutPanelActivity
+            // 
+            this.flowLayoutPanelActivity.AutoScroll = true;
+            this.flowLayoutPanelActivity.Location = new System.Drawing.Point(579, 548);
+            this.flowLayoutPanelActivity.Name = "flowLayoutPanelActivity";
+            this.flowLayoutPanelActivity.Size = new System.Drawing.Size(449, 168);
+            this.flowLayoutPanelActivity.TabIndex = 31;
+            // 
+            // txtGoalName
+            // 
+            this.txtGoalName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtGoalName.BorderColor = System.Drawing.Color.White;
+            this.txtGoalName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGoalName.DefaultText = "";
+            this.txtGoalName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGoalName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGoalName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGoalName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGoalName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGoalName.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.txtGoalName.ForeColor = System.Drawing.Color.Black;
+            this.txtGoalName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGoalName.Location = new System.Drawing.Point(45, 751);
+            this.txtGoalName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGoalName.Name = "txtGoalName";
+            this.txtGoalName.PasswordChar = '\0';
+            this.txtGoalName.PlaceholderText = "Goal name. Ex: Swimming 220m";
+            this.txtGoalName.SelectedText = "";
+            this.txtGoalName.Size = new System.Drawing.Size(421, 47);
+            this.txtGoalName.TabIndex = 46;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(359, 871);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 49);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "Add";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(31)))), ((int)(((byte)(54)))));
-            this.BackgroundImage = global::FitnessCLUB.Properties.Resources.Desktop___1__1_;
+            this.BackgroundImage = global::FitnessCLUB.Properties.Resources.homepage3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtGoalName);
+            this.Controls.Add(this.flowLayoutPanelActivity);
+            this.Controls.Add(this.rdoSkipping);
+            this.Controls.Add(this.rdoSwimming);
+            this.Controls.Add(this.rdoWalking);
+            this.Controls.Add(this.rdoCycling);
+            this.Controls.Add(this.rdoZumba);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.flowLayoutPanelGoal);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2CustomRadioButton6);
-            this.Controls.Add(this.guna2CustomRadioButton4);
-            this.Controls.Add(this.guna2CustomRadioButton5);
-            this.Controls.Add(this.guna2CustomRadioButton7);
-            this.Controls.Add(this.guna2CustomRadioButton2);
-            this.Controls.Add(this.guna2CustomRadioButton1);
+            this.Controls.Add(this.lblTodayProgress);
+            this.Controls.Add(this.rdoRunning);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Addgoalbtn);
-            this.Controls.Add(this.Enter_Goal);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.select_Excercise);
+            this.Controls.Add(this.selectExcercise);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStreak);
             this.Controls.Add(this.sataCircularProgress1);
-            this.Controls.Add(this.cuiCircleProgressBar1);
+            this.Controls.Add(this.todayProgressBar);
             this.DoubleBuffered = true;
             this.Name = "Home1";
             this.Size = new System.Drawing.Size(1070, 938);
             this.Load += new System.EventHandler(this.Home_Load);
+            this.DoubleClick += new System.EventHandler(this.Home1_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -391,25 +394,25 @@
 
         #endregion
 
-        private CuoreUI.Controls.cuiCircleProgressBar cuiCircleProgressBar1;
+        private CuoreUI.Controls.cuiCircleProgressBar todayProgressBar;
         private SATAUiFramework.Controls.SATACircularProgress sataCircularProgress1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStreak;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox select_Excercise;
-        private System.Windows.Forms.TextBox textBox1;
-        private SATATextBox Enter_Goal;
-        private System.Windows.Forms.Button Addgoalbtn;
+        private System.Windows.Forms.ComboBox selectExcercise;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton1;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton2;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton7;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton5;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton4;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoRunning;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTodayProgress;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelGoal;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoZumba;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoCycling;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoWalking;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoSwimming;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoSkipping;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelActivity;
+        private Guna.UI2.WinForms.Guna2TextBox txtGoalName;
+        private System.Windows.Forms.Button button3;
     }
 }

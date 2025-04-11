@@ -19,12 +19,15 @@ namespace FitnessCLUB
             registerControl = new RegisterUser(this);
             loginControl = new LoginUser(this);
             forgotPasswordControl = new ForgotPassword(this);
-            questionUserControl = new QuestionsUser(this);
 
             //Load the default login control
             LoadUserControl(loginControl);
         }
-
+        public void OpenQuestionsUser(string userId)
+        {
+            questionUserControl = new QuestionsUser(this, userId);
+            LoadUserControl(questionUserControl);
+        }
         public void LoadUserControl(UserControl userControl)
         {
             panel1.Controls.Clear(); // Remove existing control
@@ -39,9 +42,7 @@ namespace FitnessCLUB
 
         private void Registerbtn_Click(object sender, EventArgs e)
         {
-            Register_user Register = new Register_user();
-            Register.Show();
-            this.Hide();
+        
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

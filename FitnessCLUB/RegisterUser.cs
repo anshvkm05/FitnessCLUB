@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace FitnessCLUB
 {
@@ -50,27 +51,67 @@ namespace FitnessCLUB
 
         private void Registerbtn_Click(object sender, EventArgs e)
         {
+            if (!IsValidEmail(txtemail.Text))
+            {
+                Invalidemail.Visible = true;
+                return;
+            }
+
+            // Validate Password
+            if (!IsValidPassword(txtpassword.Text))
+            {
+                MessageBox.Show("Password must be at least 8 characters long, contain 1 uppercase letter, and 1 digit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             try
             {
-                conn = new OleDbConnection(connString);
-                conn.Open();
-                string query = "INSERT INTO UserCred (UserID, email, Password) VALUES" + "(@userid, @email, @password)";
-                OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue("@email", txtemail.Text);
-                cmd.Parameters.AddWithValue("@userid", txtusername.Text);
-                cmd.Parameters.AddWithValue("@password", txtpassword.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Inserted Successfully");
+                using (conn = new OleDbConnection(connString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO UserCred (UserID, email, UserPassword) VALUES (@userid, @email, @password)";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@userid", txtusername.Text);
+                        cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                        cmd.Parameters.AddWithValue("@password", txtpassword.Text);
+
+                        int result = cmd.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Registered Successfull");
+                            string userId = txtusername.Text; // Assuming username is entered during registration
+                            mainForm.OpenQuestionsUser(userId); // Pass UserID
+
+                        }
+                        else if (result == 0)
+                        {
+                            MessageBox.Show("Failed to insert record");
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error" + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
 
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
+
+        // Validate Password (At least 8 chars, 1 uppercase, 1 number)
+        private bool IsValidPassword(string password)
+        {
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d).{8,}$";
+            return Regex.IsMatch(password, passwordPattern);
         }
 
         private void guna2CustomCheckBox1_Click(object sender, EventArgs e)
@@ -84,6 +125,39 @@ namespace FitnessCLUB
                 txtpassword.PasswordChar = '*';
             }
 
+        }
+
+        private void txtpassword_Enter(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+        }
+
+        private void txtpassword_Leave(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            string password = txtpassword.Text;
+
+            // Check for at least one uppercase letter
+            if (Regex.IsMatch(password, @"[A-Z]"))
+                lblCapital.ForeColor = Color.Green;
+            else
+                lblCapital.ForeColor = Color.Red;
+
+            // Check for at least 8 characters
+            if (password.Length >= 8)
+                lbl8char.ForeColor = Color.Green;
+            else
+                lbl8char.ForeColor = Color.Red;
+
+            // Check for at least one digit
+            if (Regex.IsMatch(password, @"\d"))
+                lblDigit.ForeColor = Color.Green;
+            else
+                lblDigit.ForeColor = Color.Red;
         }
     }
 }

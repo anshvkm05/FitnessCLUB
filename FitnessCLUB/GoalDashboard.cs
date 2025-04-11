@@ -21,11 +21,12 @@ namespace FitnessCLUB.Resources
         {
 
         }
-        public GoalDashboard(string goalName, string goalDate, string goalTime) : this()
+        public GoalDashboard(string goalName, string goalDate, string goalTime, string goalCalories) : this()
         {
             lblGoalName.Text = goalName;
             lblGoalDate.Text = goalDate;
             lblGoalTime.Text = goalTime;
+            lblCalories.Text = goalCalories;
         }
 
         private void guna2CustomCheckBox1_Click(object sender, EventArgs e)

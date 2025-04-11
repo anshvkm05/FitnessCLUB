@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cuiCircleProgressBar1 = new CuoreUI.Controls.cuiCircleProgressBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTodayProgress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.todayProgressBar = new CuoreUI.Controls.cuiCircleProgressBar();
+            this.lblBMI = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblWeight = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblHeight = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblBMICategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblStreak = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,113 +66,77 @@
             this.sataCircularProgress1.UnFilledColor = System.Drawing.Color.White;
             this.sataCircularProgress1.UnfilledThickness = 24;
             // 
-            // guna2HtmlLabel1
+            // lblTodayProgress
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(525, 219);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(73, 67);
-            this.guna2HtmlLabel1.TabIndex = 31;
-            this.guna2HtmlLabel1.Text = "5%";
+            this.lblTodayProgress.BackColor = System.Drawing.Color.Transparent;
+            this.lblTodayProgress.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
+            this.lblTodayProgress.ForeColor = System.Drawing.Color.White;
+            this.lblTodayProgress.Location = new System.Drawing.Point(525, 228);
+            this.lblTodayProgress.Name = "lblTodayProgress";
+            this.lblTodayProgress.Size = new System.Drawing.Size(53, 49);
+            this.lblTodayProgress.TabIndex = 31;
+            this.lblTodayProgress.Text = "5%";
             // 
-            // cuiCircleProgressBar1
+            // todayProgressBar
             // 
-            this.cuiCircleProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.cuiCircleProgressBar1.BorderWidth = 25;
-            this.cuiCircleProgressBar1.ForeColor = System.Drawing.Color.Black;
-            this.cuiCircleProgressBar1.Location = new System.Drawing.Point(469, 164);
-            this.cuiCircleProgressBar1.MaximumValue = 100;
-            this.cuiCircleProgressBar1.MinimumSize = new System.Drawing.Size(50, 50);
-            this.cuiCircleProgressBar1.MinimumValue = 0;
-            this.cuiCircleProgressBar1.Name = "cuiCircleProgressBar1";
-            this.cuiCircleProgressBar1.NormalColor = System.Drawing.Color.White;
-            this.cuiCircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.cuiCircleProgressBar1.ProgressValue = 5;
-            this.cuiCircleProgressBar1.RoundedEnds = true;
-            this.cuiCircleProgressBar1.Size = new System.Drawing.Size(178, 176);
-            this.cuiCircleProgressBar1.TabIndex = 30;
+            this.todayProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
+            this.todayProgressBar.BorderWidth = 25;
+            this.todayProgressBar.ForeColor = System.Drawing.Color.Black;
+            this.todayProgressBar.Location = new System.Drawing.Point(469, 164);
+            this.todayProgressBar.MaximumValue = 100;
+            this.todayProgressBar.MinimumSize = new System.Drawing.Size(50, 50);
+            this.todayProgressBar.MinimumValue = 0;
+            this.todayProgressBar.Name = "todayProgressBar";
+            this.todayProgressBar.NormalColor = System.Drawing.Color.White;
+            this.todayProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.todayProgressBar.ProgressValue = 5;
+            this.todayProgressBar.RoundedEnds = true;
+            this.todayProgressBar.Size = new System.Drawing.Size(178, 176);
+            this.todayProgressBar.TabIndex = 30;
             // 
-            // label4
+            // lblBMI
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(846, 139);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 32);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Streak of";
+            this.lblBMI.BackColor = System.Drawing.Color.Transparent;
+            this.lblBMI.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.lblBMI.Location = new System.Drawing.Point(94, 563);
+            this.lblBMI.Name = "lblBMI";
+            this.lblBMI.Size = new System.Drawing.Size(233, 159);
+            this.lblBMI.TabIndex = 38;
+            this.lblBMI.Text = "25.2";
             // 
-            // label3
+            // lblWeight
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(846, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 32);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Days";
+            this.lblWeight.BackColor = System.Drawing.Color.Transparent;
+            this.lblWeight.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.lblWeight.Location = new System.Drawing.Point(425, 563);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(133, 159);
+            this.lblWeight.TabIndex = 39;
+            this.lblWeight.Text = "75";
             // 
-            // label2
+            // lblHeight
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(53)))));
-            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 129.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.label2.Location = new System.Drawing.Point(817, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 204);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "5";
+            this.lblHeight.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeight.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.lblHeight.Location = new System.Drawing.Point(755, 563);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(183, 159);
+            this.lblHeight.TabIndex = 40;
+            this.lblHeight.Text = "169";
             // 
-            // guna2HtmlLabel2
+            // lblBMICategory
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(94, 563);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(233, 159);
-            this.guna2HtmlLabel2.TabIndex = 38;
-            this.guna2HtmlLabel2.Text = "25.2";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(425, 563);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(133, 159);
-            this.guna2HtmlLabel3.TabIndex = 39;
-            this.guna2HtmlLabel3.Text = "75";
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Bernard MT Condensed", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(755, 563);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(183, 159);
-            this.guna2HtmlLabel4.TabIndex = 40;
-            this.guna2HtmlLabel4.Text = "169";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(94, 707);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(170, 42);
-            this.guna2HtmlLabel5.TabIndex = 41;
-            this.guna2HtmlLabel5.Text = "Overweight";
+            this.lblBMICategory.BackColor = System.Drawing.Color.Transparent;
+            this.lblBMICategory.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMICategory.ForeColor = System.Drawing.Color.White;
+            this.lblBMICategory.Location = new System.Drawing.Point(94, 707);
+            this.lblBMICategory.Name = "lblBMICategory";
+            this.lblBMICategory.Size = new System.Drawing.Size(170, 42);
+            this.lblBMICategory.TabIndex = 41;
+            this.lblBMICategory.Text = "Overweight";
             // 
             // guna2HtmlLabel6
             // 
@@ -234,30 +198,67 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(823, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 32);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Streak of";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(844, 363);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 32);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Days";
+            // 
+            // lblStreak
+            // 
+            this.lblStreak.AutoSize = true;
+            this.lblStreak.BackColor = System.Drawing.Color.Transparent;
+            this.lblStreak.Font = new System.Drawing.Font("Bernard MT Condensed", 129.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(247)))), ((int)(((byte)(226)))));
+            this.lblStreak.Location = new System.Drawing.Point(801, 159);
+            this.lblStreak.Name = "lblStreak";
+            this.lblStreak.Size = new System.Drawing.Size(151, 204);
+            this.lblStreak.TabIndex = 47;
+            this.lblStreak.Text = "1";
+            // 
             // Progress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FitnessCLUB.Properties.Resources.Progress2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStreak);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2HtmlLabel5);
-            this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.cuiCircleProgressBar1);
+            this.Controls.Add(this.lblBMICategory);
+            this.Controls.Add(this.lblHeight);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.lblBMI);
+            this.Controls.Add(this.lblTodayProgress);
+            this.Controls.Add(this.todayProgressBar);
             this.Controls.Add(this.sataCircularProgress1);
             this.DoubleBuffered = true;
             this.Name = "Progress";
             this.Size = new System.Drawing.Size(1070, 938);
+            this.Load += new System.EventHandler(this.Progress_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,19 +268,19 @@
         #endregion
 
         private SATAUiFramework.Controls.SATACircularProgress sataCircularProgress1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private CuoreUI.Controls.cuiCircleProgressBar cuiCircleProgressBar1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTodayProgress;
+        private CuoreUI.Controls.cuiCircleProgressBar todayProgressBar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBMI;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblWeight;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblHeight;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBMICategory;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStreak;
     }
 }
