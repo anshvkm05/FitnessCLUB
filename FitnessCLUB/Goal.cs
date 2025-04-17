@@ -170,12 +170,6 @@ namespace FitnessCLUB
                         cmd.ExecuteNonQuery();
                     }
                 }
-                txtTime.Text = "";
-                txtGoalName1.Text = "";
-                txtMetric1.Text = "";
-                txtMetric2.Text = "";
-                txtMetric3.Text = "";
-                select_Excercise.Text = "";
                 Home1 home = new Home1(mainForm);
                 home.LoadGoalsFromDatabase();
                 home.LoadActivityFromDatabase();
