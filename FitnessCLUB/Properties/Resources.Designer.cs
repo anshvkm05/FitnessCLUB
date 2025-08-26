@@ -289,5 +289,15 @@ namespace FitnessCLUB.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zondicons_exclamation_outline {
+            get {
+                object obj = ResourceManager.GetObject("zondicons_exclamation-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

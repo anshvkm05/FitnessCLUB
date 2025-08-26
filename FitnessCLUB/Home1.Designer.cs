@@ -48,7 +48,10 @@
             this.flowLayoutPanelActivity = new System.Windows.Forms.FlowLayoutPanel();
             this.txtGoalName = new Guna.UI2.WinForms.Guna2TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // todayProgressBar
@@ -354,6 +357,35 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2CirclePictureBox1.Image = global::FitnessCLUB.Properties.Resources.zondicons_exclamation_outline;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 13);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(22, 23);
+            this.guna2CirclePictureBox1.TabIndex = 49;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.guna2CirclePictureBox1.MouseEnter += new System.EventHandler(this.guna2CirclePictureBox1_MouseEnter);
+            this.guna2CirclePictureBox1.MouseLeave += new System.EventHandler(this.guna2CirclePictureBox1_MouseLeave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(23, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(283, 25);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Double tap Anywhere to Refresh";
+            this.label5.Visible = false;
+            // 
             // Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +393,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(31)))), ((int)(((byte)(54)))));
             this.BackgroundImage = global::FitnessCLUB.Properties.Resources.homepage3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtGoalName);
             this.Controls.Add(this.flowLayoutPanelActivity);
@@ -387,6 +421,7 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.DoubleClick += new System.EventHandler(this.Home1_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +449,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelActivity;
         private Guna.UI2.WinForms.Guna2TextBox txtGoalName;
         private System.Windows.Forms.Button button3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

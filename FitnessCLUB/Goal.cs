@@ -16,11 +16,16 @@ namespace FitnessCLUB
 {
     public partial class Goal: UserControl
     {
+        // Delegate for customizable message box display, defaults to MessageBox.Show
+        public Func<string, string, MessageBoxButtons, MessageBoxIcon, DialogResult> ShowMessageCallback { get; set; } = MessageBox.Show;
+        // Connection string for the Access database
         string connString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=D:\Project DDOOCP try 2\FitnessCLUB\FitnessCLUB\FItnessClub.mdb;";
         OleDbConnection conn;
-        private int weight;
+        public int weight;
+        public double UserCALB;
 
         private Dashboard mainForm;
+        // Constructor: Initializes the Goal user control
         public Goal(Dashboard form)
         {
             InitializeComponent();
@@ -40,13 +45,14 @@ namespace FitnessCLUB
         {
             pictureBox2.BackColor = Color.FromArgb(4, 32, 53);
         }
-
+        // Sets the goal name and exercise in the UI
         public void SetSelectedGoal(string goalName1, string goalExercise1)
         {
             txtGoalName1.Text = goalName1;
             select_Excercise.SelectedItem = goalExercise1;
         }
 
+        // Updates metric labels based on selected exercise
         private void select_Excercise_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (select_Excercise.SelectedItem.ToString())
@@ -88,18 +94,12 @@ namespace FitnessCLUB
                     break;
             }
         }
-
-        private void Addgoalbtn_Click(object sender, EventArgs e)
+        // Inserts goal data into the database and updates UI
+        public void insertintodatabse()
         {
             string SActivity = select_Excercise.SelectedItem.ToString();
 
-            if (string.IsNullOrEmpty(txtGoalName1.Text) || string.IsNullOrEmpty(select_Excercise.Text) || string.IsNullOrEmpty(txtTime.Text) ||
-                string.IsNullOrEmpty(txtMetric1.Text) || string.IsNullOrEmpty(txtMetric2.Text) || string.IsNullOrEmpty(txtMetric3.Text))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-            else if (SActivity == "walking")
+            if (SActivity == "walking")
             {
                 if ((Int32.Parse(txtMetric2.Text) * 60 / Int32.Parse(txtMetric2.Text)) < 3.2)
                 {
@@ -131,8 +131,7 @@ namespace FitnessCLUB
             }
 
             // Replace with actual user weight
-            double UserCalB = Activity.GetCaloriesBurned(weight, Activity.GetMETValue(SActivity.ToString(), txtMetric1.Text), Int32.Parse(txtMetric3.Text));
-
+            UserCALB = Activity.GetCaloriesBurned(weight, Activity.GetMETValue(SActivity.ToString(), txtMetric1.Text), Int32.Parse(txtMetric3.Text));
             try
             {
                 using (conn = new OleDbConnection(connString))
@@ -155,7 +154,7 @@ namespace FitnessCLUB
                         int result = cmd.ExecuteNonQuery();
                         if (result > 0)
                         {
-                            MessageBox.Show("Goal added successfully. The Calories Burned is " + UserCalB.ToString());
+                            MessageBox.Show("Goal added successfully. The Calories Burned is " + UserCALB.ToString());
                         }
                         else
                         {
@@ -165,22 +164,46 @@ namespace FitnessCLUB
                     string query2 = "UPDATE UserData SET TotalCALDone = TotalCALDone + @calories WHERE UserID = @UserID";
                     using (OleDbCommand cmd = new OleDbCommand(query2, conn))
                     {
-                        cmd.Parameters.AddWithValue("@calories", UserCalB);
+                        cmd.Parameters.AddWithValue("@calories", UserCALB);
                         cmd.Parameters.AddWithValue("@UserID", (LoginUser.SessionManager.CurrentUserID).ToString()); // Replace with actual UserID
                         cmd.ExecuteNonQuery();
                     }
                 }
-                Home1 home = new Home1(mainForm);
-                home.LoadGoalsFromDatabase();
-                home.LoadActivityFromDatabase();
-                home.UpdateTodayCalories(UserCalB);
-                home.LoadProgressData();
-                mainForm.homeControl.BringToFront();
-            } 
+
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            txtTime.Text = "";
+            txtGoalName1.Text = "";
+            txtMetric1.Text = "";
+            txtMetric2.Text = "";
+            txtMetric3.Text = "";
+            select_Excercise.Text = "";
+            Home1 home = new Home1(mainForm);
+            home.LoadGoalsFromDatabase();
+            home.LoadActivityFromDatabase();
+            home.UpdateTodayCalories(UserCALB);
+            home.LoadProgressData();
+            mainForm.homeControl.BringToFront();
+
+        }
+        private void Addgoalbtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTime.Text) || string.IsNullOrEmpty(txtMetric1.Text) || string.IsNullOrEmpty(txtMetric2.Text) || string.IsNullOrEmpty(txtMetric3.Text))
+            {
+                ShowMessageCallback("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // Validate the time format (expected format: HH:mm)
+            string timePattern = @"^([01]\d|2[0-3]):[0-5]\d$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTime.Text, timePattern))
+            {
+                ShowMessageCallback("Please enter the time in the correct format (HH:mm).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            insertintodatabse();
 
         }
 

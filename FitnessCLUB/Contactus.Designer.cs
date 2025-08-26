@@ -62,6 +62,7 @@
             this.cuiTextBox22.TabIndex = 40;
             this.cuiTextBox22.TextOffset = new System.Drawing.Size(0, 0);
             this.cuiTextBox22.UnderlinedStyle = false;
+            this.cuiTextBox22.ContentChanged += new System.EventHandler(this.cuiTextBox22_ContentChanged);
             // 
             // cuiTextBox21
             // 
@@ -86,6 +87,7 @@
             this.cuiTextBox21.TabIndex = 41;
             this.cuiTextBox21.TextOffset = new System.Drawing.Size(0, 0);
             this.cuiTextBox21.UnderlinedStyle = false;
+            this.cuiTextBox21.ContentChanged += new System.EventHandler(this.cuiTextBox21_ContentChanged);
             // 
             // cuiTextBox23
             // 
@@ -123,6 +125,7 @@
             this.button2.TabIndex = 43;
             this.button2.Text = "Send";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -134,6 +137,7 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(240, 39);
             this.guna2HtmlLabel1.TabIndex = 44;
             this.guna2HtmlLabel1.Text = "Fitclub@gmail.com";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -145,6 +149,7 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(153, 39);
             this.guna2HtmlLabel2.TabIndex = 45;
             this.guna2HtmlLabel2.Text = "8356839823";
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -156,6 +161,7 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(328, 39);
             this.guna2HtmlLabel3.TabIndex = 46;
             this.guna2HtmlLabel3.Text = "Vashi road, wadala, Fitclub";
+            this.guna2HtmlLabel3.Click += new System.EventHandler(this.guna2HtmlLabel3_Click);
             // 
             // pictureBox2
             // 
@@ -188,6 +194,7 @@
             this.DoubleBuffered = true;
             this.Name = "Contactus";
             this.Size = new System.Drawing.Size(1070, 938);
+            this.Load += new System.EventHandler(this.Contactus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -146,5 +146,15 @@ namespace FitnessCLUB
         {
 
         }
+
+        private void guna2CirclePictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Visible = true;
+        }
+
+        private void guna2CirclePictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Visible = false;
+        }
     }
 }

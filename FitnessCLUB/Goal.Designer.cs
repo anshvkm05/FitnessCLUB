@@ -343,18 +343,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox select_Excercise;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker;
+        internal System.Windows.Forms.ComboBox select_Excercise;
+        internal Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button Addgoalbtn;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblMetric1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblMetric2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblMetric3;
-        private Guna.UI2.WinForms.Guna2TextBox txtGoalName1;
-        private Guna.UI2.WinForms.Guna2TextBox txtTime;
-        private Guna.UI2.WinForms.Guna2TextBox txtMetric1;
-        private Guna.UI2.WinForms.Guna2TextBox txtMetric2;
-        private Guna.UI2.WinForms.Guna2TextBox txtMetric3;
+        internal Guna.UI2.WinForms.Guna2HtmlLabel lblMetric1;
+        internal Guna.UI2.WinForms.Guna2HtmlLabel lblMetric2;
+        internal Guna.UI2.WinForms.Guna2HtmlLabel lblMetric3;
+        internal Guna.UI2.WinForms.Guna2TextBox txtGoalName1;
+        internal Guna.UI2.WinForms.Guna2TextBox txtTime;
+        internal Guna.UI2.WinForms.Guna2TextBox txtMetric1;
+        internal Guna.UI2.WinForms.Guna2TextBox txtMetric2;
+        internal Guna.UI2.WinForms.Guna2TextBox txtMetric3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

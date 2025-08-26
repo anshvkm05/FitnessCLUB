@@ -121,14 +121,14 @@
   <data name="Desktop - 1 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Desktop - 1 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Desktop - 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desktop - 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cross2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cross2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ContactUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ContactUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Goal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Goal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fitness Register_new1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fitness Register_new1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,23 +139,26 @@
   <data name="Fitness Login new 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fitness Login new 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuestionaryUSer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuestionaryUSer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Group 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Progress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Progress1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Goal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Desktop - 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Desktop - 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fitness club logo - Made with PosterMyWall (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fitness club logo - Made with PosterMyWall (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fitness Register_new11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fitness Register_new11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Desktop - 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Desktop - 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fitness club logo - Made with PosterMyWall (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fitness club logo - Made with PosterMyWall (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homepage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepage3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,14 +166,14 @@
   <data name="Activity1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Activity1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Setting2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Setting2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Progress2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Progress2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Forgot password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forgot password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QuestionaryUSer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QuestionaryUSer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Goalpage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Goalpage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,13 +181,13 @@
   <data name="user-icon-in-flat-style" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-icon-in-flat-style.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Progress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Progress1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuestionaryUSer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuestionaryUSer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Setting2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Setting2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zondicons_exclamation-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zondicons_exclamation-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -372,13 +372,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2CustomCheckBox showpass;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private Guna.UI2.WinForms.Guna2TextBox txtemail;
+        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        public Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public Guna.UI2.WinForms.Guna2TextBox txtemail;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDigit;
         private System.Windows.Forms.Label lbl8char;
         private System.Windows.Forms.Label lblCapital;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Invalidemail;
+        public Guna.UI2.WinForms.Guna2HtmlLabel Invalidemail;
     }
 }
