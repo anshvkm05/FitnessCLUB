@@ -45,6 +45,11 @@ FitnessCLUB is a Windows Forms application built with .NET Framework 4.7.2. An a
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
+#To contribute:
+ 1. Clone the repo
+ 2. Now download the following Nuget packages: GunaUI,Ububox.G2Crack, Castle.Core, CuoreUi, MetroModernUI, SATAUiFramework.
+ 3. Good to go..
+ 4. Make changes and give me a pull request.
 
 ## License
 
