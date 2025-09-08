@@ -15,7 +15,7 @@ namespace FitnessCLUB.Resources
 {
     public partial class Setting: UserControl
     {
-        string connString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=D:\Project DDOOCP try 2\FitnessCLUB\FitnessCLUB\FItnessClub.mdb;";
+        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.LocalUserAppDataPath}\FItnessClub.mdb;";
         OleDbConnection conn; // Store UserID
         public Setting()
         {

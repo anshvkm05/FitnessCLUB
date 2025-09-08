@@ -19,7 +19,7 @@ namespace FitnessCLUB
         // Delegate for customizable message box display, defaults to MessageBox.Show
         public Func<string, string, MessageBoxButtons, MessageBoxIcon, DialogResult> ShowMessageCallback { get; set; } = MessageBox.Show;
         // Connection string for the Access database
-        string connString = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=D:\Project DDOOCP try 2\FitnessCLUB\FitnessCLUB\FItnessClub.mdb;";
+        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.LocalUserAppDataPath}\FItnessClub.mdb;";
         OleDbConnection conn;
         private string SActivity;
         private string EN;

@@ -1,19 +1,11 @@
 ﻿using FitnessCLUB.Resources;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
 
 namespace FitnessCLUB
 {
-    public partial class Dashboard: Form
+    public partial class Dashboard : Form
     {
         public Home1 homeControl;
         public Activity activityControl;
@@ -24,7 +16,7 @@ namespace FitnessCLUB
         public Dashboard()
         {
             InitializeComponent();
-            
+
             homeControl = new Home1(this);
             goalControl = new Goal(this);
             activityControl = new Activity(this);
@@ -32,7 +24,7 @@ namespace FitnessCLUB
             contactusControl = new Contactus();
             ProgressControl = new Progress(this);
 
-           
+
 
             panelContainer.Controls.Add(activityControl);
             panelContainer.Controls.Add(homeControl);
@@ -113,7 +105,7 @@ namespace FitnessCLUB
 
         private void cuiLabel2_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cuiLabel2_MouseLeave(object sender, EventArgs e)
@@ -174,6 +166,11 @@ namespace FitnessCLUB
         {
             cuiLabel6.BackColor = Color.FromArgb(4, 32, 53);
             cuiLabel6.ForeColor = Color.White;
+        }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -42,9 +42,9 @@
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCapital = new System.Windows.Forms.Label();
-            this.lbl8char = new System.Windows.Forms.Label();
             this.lblDigit = new System.Windows.Forms.Label();
+            this.lbl8char = new System.Windows.Forms.Label();
+            this.lblCapital = new System.Windows.Forms.Label();
             this.Invalidemail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.sataPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -283,15 +283,15 @@
             this.panel1.TabIndex = 29;
             this.panel1.Visible = false;
             // 
-            // lblCapital
+            // lblDigit
             // 
-            this.lblCapital.AutoSize = true;
-            this.lblCapital.ForeColor = System.Drawing.Color.Red;
-            this.lblCapital.Location = new System.Drawing.Point(4, 5);
-            this.lblCapital.Name = "lblCapital";
-            this.lblCapital.Size = new System.Drawing.Size(162, 13);
-            this.lblCapital.TabIndex = 0;
-            this.lblCapital.Text = "At least 1 Uppercase Letter (A-Z)";
+            this.lblDigit.AutoSize = true;
+            this.lblDigit.ForeColor = System.Drawing.Color.Red;
+            this.lblDigit.Location = new System.Drawing.Point(4, 31);
+            this.lblDigit.Name = "lblDigit";
+            this.lblDigit.Size = new System.Drawing.Size(115, 13);
+            this.lblDigit.TabIndex = 2;
+            this.lblDigit.Text = "At least 1 Number (0-9)";
             // 
             // lbl8char
             // 
@@ -303,15 +303,15 @@
             this.lbl8char.TabIndex = 1;
             this.lbl8char.Text = "At least 8 Characters";
             // 
-            // lblDigit
+            // lblCapital
             // 
-            this.lblDigit.AutoSize = true;
-            this.lblDigit.ForeColor = System.Drawing.Color.Red;
-            this.lblDigit.Location = new System.Drawing.Point(4, 31);
-            this.lblDigit.Name = "lblDigit";
-            this.lblDigit.Size = new System.Drawing.Size(115, 13);
-            this.lblDigit.TabIndex = 2;
-            this.lblDigit.Text = "At least 1 Number (0-9)";
+            this.lblCapital.AutoSize = true;
+            this.lblCapital.ForeColor = System.Drawing.Color.Red;
+            this.lblCapital.Location = new System.Drawing.Point(4, 5);
+            this.lblCapital.Name = "lblCapital";
+            this.lblCapital.Size = new System.Drawing.Size(162, 13);
+            this.lblCapital.TabIndex = 0;
+            this.lblCapital.Text = "At least 1 Uppercase Letter (A-Z)";
             // 
             // Invalidemail
             // 

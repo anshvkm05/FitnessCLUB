@@ -13,7 +13,7 @@ namespace FitnessCLUB
 {
     public partial class LoginUser: UserControl
     {
-        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.StartupPath}\FItnessClub.mdb;";
+        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.LocalUserAppDataPath}\FItnessClub.mdb;";
         OleDbConnection conn;
         private int lockaccount = 0;
         private static Dictionary<string, int> failedAttempts = new Dictionary<string, int>();

@@ -14,7 +14,7 @@ namespace FitnessCLUB
 {
     public partial class RegisterUser: UserControl
     {
-        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.StartupPath}\FItnessClub.mdb;";
+        string connString = $@"Provider=Microsoft.JET.OLEDB.4.0;Data Source={Application.LocalUserAppDataPath}\FItnessClub.mdb;";
         OleDbConnection conn;
 
         private Login_user mainForm;
